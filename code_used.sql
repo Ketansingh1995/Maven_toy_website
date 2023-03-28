@@ -1,4 +1,3 @@
-
 -- to get all the sessions id's which didn't click through further into website
 WITH single_session AS ( SELECT website_session_id, COUNT(*)
 FROM website_pageviews
@@ -37,7 +36,7 @@ ON website_sessions.website_session_id = orders.website_session_id
 LEFT JOIN single_session
 ON website_sessions.website_session_id = single_session.website_session_id
 GROUP BY 1,2,3
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- to get the performance of different channels through which orders are being placed
 
@@ -55,6 +54,7 @@ FROM website_sessions
 LEFT JOIN orders
 ON website_sessions.website_session_id = orders.website_session_id
 GROUP BY 1,2,3
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- code to get revenue and margins of products available on website
 
@@ -79,6 +79,7 @@ FROM order_items
 LEFT JOIN products
 ON order_items.product_id = products.product_id
 GROUP BY 1,2
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- code to get overall cross-selling of products
 
