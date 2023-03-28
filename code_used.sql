@@ -115,4 +115,4 @@ COUNT(CASE WHEN cross_item = 3 THEN 1 ELSE NULL END) AS Sugar_Panda,
 COUNT(CASE WHEN cross_item = 4 THEN 1 ELSE NULL END) AS Mini_bear
 FROM final_table
 GROUP BY 1
-ORDER BY 1
+ORDER BY 
