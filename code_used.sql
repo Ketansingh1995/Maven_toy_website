@@ -1,3 +1,5 @@
+-- BELOW CODE WAS USED TO GENERATE DATA FOR TABLE 'efficiencies' USED IN POWER BI DASHBOARD
+
 -- to get all the sessions id's which didn't click through further into website
 WITH single_session AS ( SELECT website_session_id, COUNT(*)
 FROM website_pageviews
@@ -37,6 +39,7 @@ LEFT JOIN single_session
 ON website_sessions.website_session_id = single_session.website_session_id
 GROUP BY 1,2,3
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- BELOW CODE WAS USED TO GENERATE DATA FOR TABLE 'channel_orders' USED IN POWER BI DASHBOARD
 
 -- to get the performance of different channels through which orders are being placed
 
@@ -55,6 +58,7 @@ LEFT JOIN orders
 ON website_sessions.website_session_id = orders.website_session_id
 GROUP BY 1,2,3
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- BELOW CODE WAS USED TO GENERATE DATA FOR TABLE 'monthly_product_reven' USED IN POWER BI DASHBOARD
 
 -- code to get revenue and margins of products available on website
 
@@ -80,6 +84,7 @@ LEFT JOIN products
 ON order_items.product_id = products.product_id
 GROUP BY 1,2
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- BELOW CODE WAS USED TO GENERATE DATA FOR TABLE 'cross_selling' USED IN POWER BI DASHBOARD
 
 -- code to get overall cross-selling of products
 
